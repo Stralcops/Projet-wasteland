@@ -1,0 +1,80 @@
+html
+{
+}
+.button
+{
+  height: 50px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   color: white;
+   border-radius: 5px;
+}
+#pj
+{
+  margin: 50px;
+}
+#mob
+{
+  margin: 50px;
+}
+
+.content
+{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.flex
+{
+  display: flex;
+  justify-content: space-around;
+}
+section .flex
+{
+  justify-content: space-around;
+
+}
+.gauche
+{
+  margin-top: 50px;
+  width: 45%;
+  height: 100%;
+  background-color: #f1f1f1;
+}
+.droite
+{
+  margin-top: 50px;
+  width: 45%;
+  height: 100%;
+  background-color: #f1f1f1;
+}
+.card
+{
+    margin: 50px;
+    padding: 10px;
+}
+div
+{
+  border: 5px;
+}
+.p-10
+{
+  padding: 10px;
+}
+.w-100
+{
+  width: 100%;
+}
+#section-connexion
+{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formConnexion{
+  height: 500px;
+  width: 50%;
+  background-color: red;
+}

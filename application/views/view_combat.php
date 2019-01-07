@@ -10,11 +10,15 @@ $query_mob = $this->db->get('t_mob');
     <?php foreach ($query_user->result() as $row)
     { ?>
     <div class="card z-depth-5">
+        <div id="btnRemove" class="btn red croix" onclick="delete()">
+          X
+        </div>
       <div class="name">
         <h4><?php echo $row->joueur_user; ?></h4>
         <h5><?php echo $row->nom_user; ?></h5>
+        <input type="hidden" id="id_user" name="" value="<?php echo $row->user_id ?>">
         <p>PV max : <?php echo $row->hp_user; ?></p>
-        <p>PV restant : <input type="number" name="" value="<?php echo $row->hp_user; ?>"></p>
+        <p>PV restant : <input id="chp_user" type="number" name="" value="<?php echo $row->hp_user; ?>"></p>
       </div>
     </div>
   <?php } ?>
@@ -57,7 +61,6 @@ $query_mob = $this->db->get('t_mob');
                <input placeholder="Placeholder" id="hp_user" type="text" class="validate">
                <label for="hp_user">Nombre de pv</label>
              </div>
-
            </div>
     </form>
   </div>
@@ -120,4 +123,33 @@ $(document).ready(function()
         },
      });
 });
+$("#chp_user").change(function()
+{
+  alert('test');
+});
+
+
+function delete()
+{
+  $("this").hide();
+}
+function update_user()
+{
+  var data= {
+    chp_user = "chp_user",
+  };
+  $.ajax({
+    url:' ',
+    data: data,
+    type: 'POST',
+    success: function(result)
+    {
+      console.log(result);
+    },
+    error: function()
+    {
+      alert("Oops, une erreur s'est produite enculé de tes morts");
+    }
+  });
+}
 </script>

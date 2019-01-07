@@ -78,3 +78,9 @@ div
   width: 50%;
   background-color: red;
 }
+.croix
+{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}

@@ -98,4 +98,12 @@ $this->db->insert('t_mob', $data);
 		$this->load->view('addpj');
 		$this->load->view('templates/footer');
 	}
+	public function update_user()
+	{
+		$data = array(
+			"chp_user" => "chp_user",
+		);
+		$this->load->model("user_model");
+		$this->user_model->update($data);
+	}
 }

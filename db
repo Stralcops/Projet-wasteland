@@ -1,0 +1,61 @@
+-- phpMyAdmin SQL Dump
+-- version 3.5.7
+-- http://www.phpmyadmin.net
+--
+-- Client: localhost
+-- Généré le: Mar 08 Janvier 2019 à 13:00
+-- Version du serveur: 5.5.29
+-- Version de PHP: 5.4.10
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Base de données: `wasteland`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `t_mob`
+--
+
+CREATE TABLE `t_mob` (
+  `id_mob` int(11) NOT NULL AUTO_INCREMENT,
+  `mob_perso` varchar(60) NOT NULL,
+  `mob_hp` int(11) NOT NULL,
+  `mob_chp` int(11) NOT NULL,
+  `mob_psy` int(11) NOT NULL,
+  `mob_cpsy` int(11) NOT NULL,
+  PRIMARY KEY (`id_mob`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `t_pj`
+--
+
+CREATE TABLE `t_pj` (
+  `id_pj` int(11) NOT NULL AUTO_INCREMENT,
+  `pj_joueur` varchar(60) NOT NULL,
+  `pj_perso` varchar(60) NOT NULL,
+  `pj_hp` int(11) NOT NULL,
+  `pj_chp` int(11) NOT NULL,
+  `pj_psy` int(11) NOT NULL,
+  `pj_cpsy` int(11) NOT NULL,
+  PRIMARY KEY (`id_pj`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `t_resume`
+--
+
+CREATE TABLE `t_resume` (
+  `id_resume` int(11) NOT NULL AUTO_INCREMENT,
+  `resume_title` varchar(130) NOT NULL,
+  `resume_text` text NOT NULL,
+  PRIMARY KEY (`id_resume`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;

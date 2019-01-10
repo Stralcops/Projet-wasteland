@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Mar 08 Janvier 2019 à 13:00
+-- Généré le: Jeu 10 Janvier 2019 à 17:05
 -- Version du serveur: 5.5.29
 -- Version de PHP: 5.4.10
 
@@ -22,13 +22,20 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `t_mob` (
   `id_mob` int(11) NOT NULL AUTO_INCREMENT,
-  `mob_perso` varchar(60) NOT NULL,
+  `mob_nom` varchar(60) NOT NULL,
   `mob_hp` int(11) NOT NULL,
   `mob_chp` int(11) NOT NULL,
   `mob_psy` int(11) NOT NULL,
   `mob_cpsy` int(11) NOT NULL,
   PRIMARY KEY (`id_mob`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Contenu de la table `t_mob`
+--
+
+INSERT INTO `t_mob` (`id_mob`, `mob_nom`, `mob_hp`, `mob_chp`, `mob_psy`, `mob_cpsy`) VALUES
+(1, 'Loup', 12, 12, 9, 9);
 
 -- --------------------------------------------------------
 
@@ -44,8 +51,64 @@ CREATE TABLE `t_pj` (
   `pj_chp` int(11) NOT NULL,
   `pj_psy` int(11) NOT NULL,
   `pj_cpsy` int(11) NOT NULL,
+  `pj_peuple` int(11) NOT NULL,
+  `pj_sexe` int(11) NOT NULL,
+  `pj_metier` int(11) NOT NULL,
+  `pj_origine` int(11) NOT NULL,
+  `pj_heritage` int(11) NOT NULL,
+  `pj_ba` int(11) NOT NULL,
+  `pj_cba` int(11) NOT NULL,
+  `pj_eclat` int(11) NOT NULL,
+  `pj_exp` int(11) NOT NULL,
+  `pj_adr` int(11) NOT NULL,
+  `pj_pui` int(11) NOT NULL,
+  `pj_cla` int(11) NOT NULL,
+  `pj_pre` int(11) NOT NULL,
+  `pj_tre` int(11) NOT NULL,
+  `pj_distance` int(11) NOT NULL,
+  `pj_corecition` int(11) NOT NULL,
+  `pj_commerce` int(11) NOT NULL,
+  `pj_discretion` int(11) NOT NULL,
+  `pj_filouterie` int(11) NOT NULL,
+  `pj_melee` int(11) NOT NULL,
+  `pj_monte` int(11) NOT NULL,
+  `pj_mouvements` int(11) NOT NULL,
+  `pj_nage` int(11) NOT NULL,
+  `pj_navigation` int(11) NOT NULL,
+  `pj_perception` int(11) NOT NULL,
+  `pj_persuasion` int(11) NOT NULL,
+  `pj_soins` int(11) NOT NULL,
+  `pj_survie` int(11) NOT NULL,
+  `pj_hpnl` int(11) NOT NULL,
+  `pj_chpnl` int(11) NOT NULL,
+  `pj_capacite` text NOT NULL,
+  `pj_initiative` int(11) NOT NULL,
+  `pj_bonus_degat` int(11) NOT NULL,
+  `pj_vitesse` int(11) NOT NULL,
+  `pj_defense_base` int(11) NOT NULL,
+  `pj_pouvoir` text NOT NULL,
+  `pj_age` varchar(10) NOT NULL,
+  `pj_yeux` varchar(10) NOT NULL,
+  `pj_poids` int(11) NOT NULL,
+  `pj_cheveux` varchar(10) NOT NULL,
+  `pj_taille` int(11) NOT NULL,
+  `pj_notes` text NOT NULL,
+  `pj_equipement` text NOT NULL,
+  `pj_artifex` text NOT NULL,
+  `pj_hubris` text NOT NULL,
+  `pj_pz` int(11) NOT NULL,
+  `pj_pe` int(11) NOT NULL,
+  `pj_photo` varchar(200) NOT NULL,
   PRIMARY KEY (`id_pj`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Contenu de la table `t_pj`
+--
+
+INSERT INTO `t_pj` (`id_pj`, `pj_joueur`, `pj_perso`, `pj_hp`, `pj_chp`, `pj_psy`, `pj_cpsy`, `pj_peuple`, `pj_sexe`, `pj_metier`, `pj_origine`, `pj_heritage`, `pj_ba`, `pj_cba`, `pj_eclat`, `pj_exp`, `pj_adr`, `pj_pui`, `pj_cla`, `pj_pre`, `pj_tre`, `pj_distance`, `pj_corecition`, `pj_commerce`, `pj_discretion`, `pj_filouterie`, `pj_melee`, `pj_monte`, `pj_mouvements`, `pj_nage`, `pj_navigation`, `pj_perception`, `pj_persuasion`, `pj_soins`, `pj_survie`, `pj_hpnl`, `pj_chpnl`, `pj_capacite`, `pj_initiative`, `pj_bonus_degat`, `pj_vitesse`, `pj_defense_base`, `pj_pouvoir`, `pj_age`, `pj_yeux`, `pj_poids`, `pj_cheveux`, `pj_taille`, `pj_notes`, `pj_equipement`, `pj_artifex`, `pj_hubris`, `pj_pz`, `pj_pe`, `pj_photo`) VALUES
+(1, 'Antoine', 'Thanaën', 32, 31, 28, 28, 1, 1, 3, 3, 4, 6, 6, 6, 12, 7, 8, 5, 9, 7, 0, 3, 2, 1, 2, 4, 2, 3, 1, 2, 1, 2, 4, 2, 32, 32, 'Aucune capacité spéciale pour le moment', 0, 0, 0, 0, 'Aucune pouvoir pour le moment', '27', 'Marron', 87, 'Brun', 190, 'Aucune note pour le moment', 'Carapace de kangourou', 'Montre a vapeur', 'Aucun hubris pour le moment', 106, 2, 'https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwi22c2vsuPfAhXNx4UKHeqoDOcQjRx6BAgBEAU&url=https%3A%2F%2Fwww.pinterest.fr%2Fpin%2F6333255709637380%2F&psig=AOvVaw1vt7k--rXdIj'),
+(2, 'Matthieu', 'Xac-thu', 32, 27, 26, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, '', '', '', 0, '', 0, '', '', '', '', 0, 0, '');
 
 -- --------------------------------------------------------
 
